@@ -1,0 +1,61 @@
+messages = [
+    {
+        "role": "system",
+        "content": ("Welcome to the Allergy Guessing AI! This tool is designed to help you uncover potential allergies based on a series of questions. "
+                    "Please answer each question to the best of your knowledge. Let's get started!")
+    },
+    {
+        "role": "system",
+        "content": "Have you experienced any allergic reactions recently? Please describe your symptoms (e.g., sneezing, itching, rash)."
+    },
+    {
+        "role": "system",
+        "content": "How long have you experienced these symptoms, and how frequently do they occur?"
+    },
+    {
+        "role": "system",
+        "content": ("Think about when your symptoms occur. Are they worse indoors, outdoors, or both? This can help us identify if your allergies "
+                    "are related to indoor allergens like dust mites or outdoor allergens like pollen.")
+    },
+    {
+        "role": "system",
+        "content": "Have you noticed if your symptoms worsen after eating certain foods? If yes, please specify which foods."
+    },
+    {
+        "role": "system",
+        "content": "Do you have pets or have you been around animals recently when your symptoms occurred?"
+    },
+    {
+        "role": "system",
+        "content": "Do any of your immediate family members have allergies? Knowing if allergies run in your family can help identify your own potential allergies."
+    },
+    {
+        "role": "system",
+        "content": "Have you been diagnosed with any allergies in the past? If so, what are they?"
+    },
+    {
+        "role": "system",
+        "content": "Do your symptoms appear or worsen during specific seasons? This can indicate seasonal allergies, such as to pollen."
+    },
+    {
+        "role": "system",
+        "content": "Have you ever undergone allergy testing (skin test, blood test)? If yes, what were the results?"
+    },
+    {
+        "role": "system",
+        "content": "Please describe any recent changes in your lifestyle, home, or work environment. Changes in your environment can introduce new allergens."
+    },
+    {
+        "role": "system",
+        "content": ("Thank you for answering the questions. Based on your responses, the AI is analyzing the information to guess your potential allergies.")
+    },
+    {
+        "role": "system",
+        "content": ("Based on the information provided, you may have allergies to [Allergen(s)]. Please note that this AI tool is for informational purposes only and not "
+                    "a substitute for professional medical advice. We recommend consulting with an allergist for official diagnosis and treatment.")
+    },
+    {
+        "role": "system",
+        "content": ("Would you like to learn more about managing these potential allergies or book an appointment with an allergy specialist? Please let us know!")
+    }
+]

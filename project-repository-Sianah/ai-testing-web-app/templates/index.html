@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Telecom Sales Assistant</title>
+</head>
+<body>
+    <h2>Telecom Sales Assistant</h2>
+    <!-- Initial prompt when there are no messages -->
+    {% if not messages %}
+        <p>AI: Hello! How can I assist you today? Are you looking for an individual plan or a family plan?</p>
+    {% endif %}
+    <!-- Display only user and assistant messages -->
+    {% for message in messages %}
+        {% if message.role == 'user' or message.role == 'assistant' %}
+            <p><strong>{{ message.role }}:</strong> {{ message.content }}</p>
+        {% endif %}
+    {% endfor %}
+    <form action="/" method="POST">
+        <input type="text" name="user_input" placeholder="Your response..." autofocus>
+        <button type="submit">Send</button>
+        <!-- Store the messages in a hidden field to maintain state between requests -->
+        <input type="hidden" name="messages" value="{{ messages|tojson|safe }}">
+    </form>
+</body>
+</html>
+
+
+
+
+

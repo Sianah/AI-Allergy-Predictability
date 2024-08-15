@@ -1,0 +1,13 @@
+Give GPT reason 
+-Make questions from text it would use to diagnose a person with an allergy
+-Give bullet points potentially
+-Use RAG method
+-Possibility: Start with symptom
+- PLease determine if you can gauge users allergies based on input, if not ask for further information
+- Algorithm then for gpt would ask for further information based on articles given to make beter clarification 
+- Loop it based : do you think you know what allergy they have or do you need more information
+-Explain what the answer would be. Needs to produce explanation. DOn't ask it two things, but ask it a second time
+ - think of A, B, C, D scenario
+- Did you say you need more information, just type true or false(ask gpt)
+- Gpt may say it can't do that, talk to a doctor (workaround that)
+- emphasize what you learned and what it needs to do

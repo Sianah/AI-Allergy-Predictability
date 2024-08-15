@@ -1,0 +1,46 @@
+                                                                   Sianah Small
+                                          LinkedIn |     7089717936 |       smallsianah@gmail.com |    GitHub
+Skills ____________________________________________________________________________________________
+•    React | JavaScript | HTML | CSS | Web Design | Figma | Git | Prompt Engineering | Java | Python | C++ | C |
+
+Experience ______________________________________________________________________________________
+                                                                      i4Software                            Remote    07/2023 – 09/2023
+
+    Software Engineer, Intern
+•     Led the rapid launch of an ai powered full-stack application with a team of 25 developers, meeting a one-week deadline.
+•     Contributed to the timely release of 39 mobile apps, emphasizing swift execution and project proficiency.
+•     Shipped 17 mobile applications as a team on a one-day deadline using ChatGPT.
+•     Gained hands-on experience with React.js, Tailiwind CSS, Firebase, Android Studio, and Large Language Models.
+•     Engineered applications utilizing GPT prompt engineering.
+•     Independently developed web and mobile applications.
+•     Consistently documented tasks and shared insights with team members.
+•     Coded collaboratively amongst team of 25
+
+
+ Webmaster                                                         HatterNetwork                             Remote   01/2023 - Current
+•     Led the redesign and formatting of web pages, enhancing user experience.
+•     Maintained, uploaded, and organized critical documentation on the website.
+•     Collaborated closely with organization members for feedback and improvements.
+
+
+    Resident Assistant                                           Stetson University               Deland, FL, USA      08/2022 - Current
+• Oversaw the well-being of residents within assigned living areas.
+• Organized and executed monthly events, enhancing community engagement.
+• Maintained regular inspection schedules and reported incidents promptly
+
+
+Education ________________________________________________________________________________________
+
+    Bachelor of Arts and Science in                              Stetson University               Deland, FL, USA     08/2020 – 05/2024
+    Computer Science
+     • Current GPA: 3.4
+
+Projects __________________________________________________________________________________________
+• The Three Connected: Developed a text-based storyline adventure game, Utilized Python for backend logic.
+• Cookbook: Engineered a user-friendly application for recipe management and tracking, built using Java. Enhanced user experience by
+integrating intuitive UI components.
+• Workout Journal: Designed and implemented a comprehensive tool for workout planning, tracking, and dietary management using Java,
+with an emphasis on user experience.
+• Motivation Journal: Cultivated daily motivation by creating an application that delivers consistent inspirational quotes and allows users
+to track mental well-being. Built using Java.
+

@@ -1,0 +1,5 @@
+Pollen:sneezing,itchy eyes,runny nose:outdoors,spring,summer
+Dust Mites:coughing,itchy eyes,runny nose:indoors,bedroom,pillows
+Pet Dander:sneezing,itchy skin,rash:pets,animals,dogs,cats
+Mold:coughing,wheezing,throat irritation:damp,humidity,basements
+

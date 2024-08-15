@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Allergies.io</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f7f7;
+        }
+        h1 {
+            font-size: 3em;
+            color: #333;
+            margin-bottom: 0.5em;
+        }
+        #messages {
+            margin-bottom: 1em;
+            font-size: 1.25em;
+            color: #333;
+        }
+        #userInput {
+            width: 60%; 
+            padding: 0.5em;
+            font-size: 1em;
+            margin-bottom: 1em;
+        }
+        #sendButton {
+            padding: 0.5em 2em;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 5px;
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+        body {
+            flex-direction: column;
+        }
+        h1 {
+            font-size: 10vw; 
+        }
+        #messages {
+            font-size: 6vw;
+            padding: 0 10px; 
+        }
+        #userInput {
+            width: 80%; 
+            font-size: 4.5vw; 
+            padding: 12px 20px; 
+        }
+        #sendButton {
+            width: 90%; 
+            padding: 12px 20px; 
+            font-size: 4.5vw;
+            margin-top: 10px; 
+        }
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Allergies.io</h1>
+        <div id="messages">Hello! I'm here to help you identify potential allergies. Can you describe any allergic reactions you've experienced?</div>
+        <input type="text" id="userInput" placeholder="Your answer" autocomplete="off" required>
+        <button id="sendButton">Enter</button>
+    </div>
+
+    <script>
+        const messagesDiv = document.getElementById('messages');
+        const userInputField = document.getElementById('userInput');
+        const sendButton = document.getElementById('sendButton');
+    
+        // Function to send the user's message and receive the AI's response
+        // async function sendMessage() {
+        //     const userMessage = userInputField.value;
+        //     userInputField.value = '';
+        //     userInputField.disabled = true;
+        //     sendButton.disabled = true;
+    
+        //     // Fetch the AI's response
+        //     const response = await fetch('/interact', {
+        //         method: 'POST',
+        //         headers: { 'Content-Type': 'application/json' },
+        //         body: JSON.stringify({ user_input: userMessage })
+        //     });
+    
+        //     const data = await response.json();
+    
+        //     // Display the AI's response
+        //     messagesDiv.innerHTML = `<p>AI: ${data.ai_output}</p>`;
+    
+        //     // Check the content of the response to determine if it's the final message
+        //     if (data.ai_output.includes("Our assessment is complete. If you have further questions, please consult a healthcare professional.")) {
+        //         // If it is the final message, disable the text box and button
+        //         userInputField.style.display = 'none';
+        //         sendButton.style.display = 'none';
+        //     } else {
+        //         // If not, allow the user to continue the conversation
+        //         userInputField.disabled = false;
+        //         sendButton.disabled = false;
+        //         userInputField.focus();
+        //     }
+        // }
+    // Function to send the user's message and receive the AI's response
+    async function sendMessage() {
+        const userMessage = userInputField.value.trim(); // Trim whitespace
+
+        // Check if the user message is empty
+        if (userMessage === '') {
+            alert('Please enter a message.'); // Show an alert if the message is empty
+            return;
+        }
+
+        userInputField.value = '';
+
+        // Disable the input field and button while sending the message
+        userInputField.disabled = true;
+        sendButton.disabled = true;
+
+        // Fetch the AI's response
+        const response = await fetch('/interact', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ user_input: userMessage })
+        });
+
+        const data = await response.json();
+
+        // Display the AI's response
+        messagesDiv.innerHTML = `<p>AI: ${data.ai_output}</p>`;
+
+        // Check the content of the response to determine if it's the final message
+        if (data.ai_output.includes("Our assessment is complete. If you have further questions, please consult a healthcare professional.")) {
+            // If it is the final message, disable the text box and button
+            userInputField.style.display = 'none';
+            sendButton.style.display = 'none';
+        } else {
+            // If not, allow the user to continue the conversation
+            userInputField.disabled = false;
+            sendButton.disabled = false;
+            userInputField.focus();
+        }
+    }
+
+    
+        // Event listener for the Send/Enter button
+        sendButton.addEventListener('click', sendMessage);
+    
+        // Event listener for the Enter key in the input field
+        userInputField.addEventListener('keypress', function (e) {
+            if (e.key === 'Enter' && !userInputField.disabled) {
+                sendMessage();
+            }
+        });
+    
+        // Initialize the conversation with the greeting message
+        messagesDiv.innerHTML = `<p>AI: ${'{{ greeting_message }}'}</p>`;
+    </script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
